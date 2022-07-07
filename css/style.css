@@ -1,0 +1,6 @@
+*{ 
+    box-sizing: border-box;     
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* box-sizing: border-box; = ele nao acrescenta varios px no tamanho da tela */
