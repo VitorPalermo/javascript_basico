@@ -96,7 +96,18 @@ const exibeSelect = () =>{
 
     const consultaCep = () =>{
         let cep = document.getElementById ('cep').value
-        fetch(`https://viacep.com.br/ws/1387022/${cep}json/`)
-    }
-    
-   
+        const result = fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response=>response.json())
+        .then(result => {
+            // resposta final da requisição, já validada em formato JSON
+            // manipulação do HMTL
+            console.log(result)
+            document.getElementById('logradouro').value = result.logradouro;
+            document.getElementById('bairro').value = result.bairro;
+            document.getElementById('numero').value = result.numero;
+            document.getElementById('localidade').value = result.localidade;
+            document.getElementById('uf').value = result.uf;
+
+        });
+    };
+

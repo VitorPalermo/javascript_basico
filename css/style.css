@@ -28,3 +28,28 @@
     font-weight: bold;
     width: 140px;
 }
+
+#form-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.form-grid-item{
+    width: 100%;
+    padding: 8px 12px;
+}
+
+.endereco-btn{
+    background-color: blueviolet;
+    border: none;
+    color: cornsilk;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
