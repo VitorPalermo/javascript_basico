@@ -27,13 +27,76 @@ const soma2 = (numero1,numero2) =>{
 
 // Função que soma 2 numeros digitados pelo usuario em um form
 const somanumeros = () => {
-    let numero1 = document.getElementById('numero1').Value
+    let numero1 = document.getElementById('numero1').value
     let numero2 = document.getElementById('numero2').value
 
     let soma = parseFloat(numero1) + parseFloat(numero2)
 
     // exibe a soma dentro da div resultado
-    document.getElementById('resultado').innerhtml = `
+    document.getElementById('resultado').innerHTML = `
     Resultado da soma é ${soma}
     `
 }
+
+const exibe = (id) =>{
+
+ let elemento = document.getElementById(id)
+
+ if(elemento.hidden == true){
+    elemento.hidden = false
+ }else{
+    elemento.hidden = true
+ }
+}
+
+const exibeSelect = () =>{
+
+    let opcao = document.getElementById ('tecnologia').value
+    alert(opcao)
+    return
+
+    let elemento = document.getElementById(id)
+   
+    if(elemento.hidden == true){
+       elemento.hidden = false
+    }else{
+       elemento.hidden = true
+    }
+   }
+
+   const exibeCidade = () =>{
+    // captura o elemento html do estado
+    let estado = document.getElementById('estado')
+    let cidade = document.getElementById('cidade')
+    // exibe o valor do elemento capturado
+    
+    if(estado.value == 'sp' ){    
+        cidade.innerHTML = `
+        <option value = ""> São Joao da boa vista </option>
+        <option value = ""> Aguai </option>
+        <option value = ""> Aguas da Prata </option>
+        `
+    }else if(estado.value =='rj') {
+        cidade.innerHTML = `
+        <option value = ""> Laranjeiras </option>
+        <option value = ""> Xerem </option>
+        <option value = ""> Paraty </option>
+        `
+    }else if(estado.value =='mg') {
+        cidade.innerHTML = `
+        <option value = ""> Andradas </option>
+        <option value = ""> Poços de Caldas </option>
+        <option value = ""> Belo Horizonte </option>
+        `
+    }
+    }
+
+    // Função que consulta o cep de uma API
+    // 
+
+    const consultaCep = () =>{
+        let cep = document.getElementById ('cep').value
+        fetch(`https://viacep.com.br/ws/1387022/${cep}json/`)
+    }
+    
+   
